@@ -1,0 +1,62 @@
+A variable is a container to hold data
+Variable can be of various types. Primarily we have these variable types in C++
+    1. int 
+    2. float
+    3. char
+    4. double
+    5. boolean -> {1,0}
+
+int sum = 34;
+means sum is an integer variable which holds value 34 in memory
+-------------------------------------------------------
+SYNTAX FOR DECLARING VARIABLE
+Data_type variable_name = Value;
+Based on scope , variable can be classified into two types
+    1. Local Variables
+    2. Global Variables
+-------------------------------------------------------
+VARIABLE SCOPE
+Scope of a variable is the region in code where the existence of variable is valid.
+Based on scope we have Local and Global variables in C++
+
+LOCAL VARIABLES :
+local variables are declared inside the braces of any function and can be accessed only from there
+
+GLOBAL VARIABLES :
+Global variables are declared outside any function and can be accessed from anywhere.
+
+Can global and local variable have same name in c++?
+    YES
+-------------------------------------------------------
+C++ DATA TYPES 
+Data types define the type of data a variable can hold, for example an integer variable can hold integer data, a character type variable can hold character data etc.
+
+Data types in c++ are categorised in three groups:
+    Built - in 
+        int -> 1,2,3,4,5 etc whole numbers 
+        float -> decimal numbers
+        char -> 'd', 'f' etc 
+        double -> high precision decimal numbers
+        bool -> true, false
+    User defined 
+        struct 
+        union 
+        enum
+    Derived 
+        array
+        function 
+        pointers
+--------------------------------------------------------
+RULES TO DECLARE VARIABLES
+Variable names in c++ can range from 1 to 255 charcters.
+
+all variable names must begin with a letter of alphbet or an underscore(_).
+
+After the first initial letter, variable names now can also contain letters and numbers.
+
+Variable names are case sensitive.
+ 
+No spaces or special characters are allowed.
+
+You cannot use a C++ keyword (a reseeved word) as a variable name.
+
