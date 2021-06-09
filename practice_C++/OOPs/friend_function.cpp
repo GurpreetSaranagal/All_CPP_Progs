@@ -15,6 +15,7 @@ class complex
 
         }
         friend complex sumComplex(complex, complex);
+        // friend int main();
 };
 complex sumComplex(complex o1, complex o2)
 {
@@ -34,7 +35,9 @@ int main()
     c1.printNumber(); 
     c2.printNumber();
     sum = sumComplex(c1, c2);
-    // c1.sumComplex(); INVALID
+    // cout << sum . a << " is the private value \n";
+    // cout << sum . b << " is the private value \n";
+    // c1.sumComplex(); VALID ONLY IF main() IS MADE FREIND OF CLASS COMPLEX
     sum.printNumber();
     return 0;
 }
