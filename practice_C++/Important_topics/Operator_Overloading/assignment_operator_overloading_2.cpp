@@ -1,7 +1,7 @@
 // In this program we are converting data from one user defined type (class) to another user-defined type (class)
 // there are two ways of this conversion 
-// One by defining conversion function in the source class 
-// Second by defining conversion function in the destination class
+// One by defining conversion function in the source class (this program)
+// Second by defining conversion function in the destination class(2b)
 #include<iostream>
 using namespace std;
 class rupee//destination class
