@@ -1,4 +1,8 @@
 // In this program comparision operators are overloaded for stirngs 
+// Other relational operators can also be overloaded these includes 
+// >, <, ==, >=, <=, !=  
+// these operators can also be overloaded in the similar way as the > operator
+
 #include<iostream>
 #include<string.h>
 using namespace std;

@@ -1,4 +1,6 @@
 // In this program operator + is overloaded to peform concatinate function and then return that concatinated string to store it in third object
+//other binary operators can also be overloaded these opearators includes 
+// +, -, <, >, +=, !=, *, /, %, 
 #include<iostream>
 #include<string.h>
 #define size 40
