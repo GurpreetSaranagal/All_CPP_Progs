@@ -1,0 +1,11 @@
+1. New operators cannot be created for overloading :Only existing C++ operators can be overloaded. It is no possible to create a new operator for overloading. The advantages of the avoe guideline is that it simplifies the work of the compiler as compiler need not to worry about its precedence and associativity of the new perator which is to be added.
+2. All operators cannot be overloaded: Most of C++ operators can be overloaded. However certain operators such as .(member access operator), :: (scope resolution operator), size of, ?:(conditional operator), .*(pointer to member) cannot be overloaded. The main reason why these operators cannot be overloaded is that most of them already work with objects for performing certain tasks.
+3. Retain meaning: While overloading an operator, it should be depy in mind that operators should retain its natural meaning. In other words, operation performed by an overloading operator should be imilar to those defined for build in types.
+4. Retain syntax: The syntactic proerties of the operator cannot be changed by overloading. In other words, we cannot change the number of operands associated with operator by overloading.
+5. Retian Hierarchy of operators: The precedence and associativity of the operators can't be changed by overloading.
+6. Use the appropreate functions names when required: Avoid overloading the operators to perform illogical operations. If the meaning of an operation to performed by overloading an operator is undpredictable or doubtful to the user it is advisable to use functions with appropriate name insteadof an overloaded operator function, since the functions name can state its own purpose.
+7. Perdefined operations are no automatically applied to calsses 
+8. Avoid Ambiguity: The presence of more than one conversion function performing the same operation is not allowed as it puts the compiler in an uncertain situation.
+9. Overloaded operator cannot have default arguments except for function call operator.
+10. All overloaded operaotrs are inherited by derived classed except assignment operator.
+11. The operators[],(), -> or = must be overloaded as a member of the class and not useing friend function.
