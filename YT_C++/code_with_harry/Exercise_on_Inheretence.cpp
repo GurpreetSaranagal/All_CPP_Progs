@@ -15,103 +15,96 @@ Create another class HybridCalculator and inherit it using these 2 classes
 using namespace std;
 class SimpleCalculator
 {
-protected:
-    double op1;
-    double op2;
-    void utility_output(double ans)
-    {
-        cout << "The output of performed calculation is " << ans << endl;
-    }
-    void set_numbers()
-    {
-        cout << "Input the numbers:" << endl;
-        cin >> op1 >> op2;
-    }
+    protected:
+        double op1;
+        double op2;
+        void utility_output(double ans)
+        {
+            cout << "The output of performed calculation is " << ans << endl;
+        }
+        
 
-public:
-    void sum()
-    {
-        set_numbers();
-        utility_output(op1 + op2);
-    }
-    void subtract()
-    {
-        set_numbers();
-        utility_output(op1 - op1);
-    }
-    void multiply()
-    {
-        set_numbers();
-        utility_output(op1 * op2);
-    }
-    void divide()
-    {
-        set_numbers();
-        utility_output(op1 / op2);
-    }
+    public:
+    void set_numbers()
+        {
+            cout << "Input the numbers:" << endl;
+            cin >> op1 >> op2;
+        }
+        void sum()
+        {
+            utility_output(op1 + op2);
+        }
+        void subtract()
+        {
+            utility_output(op1 - op2);
+        }
+        void multiply()
+        {
+            utility_output(op1 * op2);
+        }
+        void divide()
+        {
+            utility_output(op1 / op2);
+        }
 };
 class Scietific_Calculator
 {
-private:
-    double op1, op2;
-    void set_numbers()
-    {
-        cout << "Input two numbers(double) : " << endl;
-        cin >> op1 >> op2;
-    }
-    void show_output(double ans)
-    {
-        cout << ans ;
-    }
+    protected:
+        double op1, op2;
+        
+        void show_output(double ans)
+        {
+            cout << ans ;
+        }
 
-public:
-    void cube()
-    {
-        set_numbers();
-        cout << "Cube of "<<op1<< " is ";
-        show_output(op1 * op1 * op1);
-        cout << endl;
-        cout << "Cube of "<<op2<<" is ";
-        show_output(op2 * op2 * op2);
-        cout << endl;
-    }
-    void sin_of_number(){
-        cout<<"Input angles (in Radians): "<< endl;
-        set_numbers();
-        cout<<"The sin of "<<op1 <<" is ";
-        show_output(sin(op1));
-        cout << endl;
+    public:
+        void set_numbers()
+            {
+                cout << "Input two numbers(double) : " << endl;
+                cin >> op1 >> op2;
+            }
+        void cube()
+        {
+            cout << "Cube of "<<op1<< " is ";
+            show_output(op1 * op1 * op1);
+            cout << endl;
+            cout << "Cube of "<<op2<<" is ";
+            show_output(op2 * op2 * op2);
+            cout << endl;
+        }
+        void sin_of_number(){
+            cout<<"The sin of "<<op1 <<" (in Radians) is ";
+            show_output(sin(op1));
+            cout << endl;
 
 
-        cout<<"The sin of "<<op2 <<" is "; 
-        show_output(sin(op2));
-        cout<< endl;
-    }
-    void square_roots()
-    {
-        set_numbers();
-        cout << "The square root of "<< op1<< " is ";
-        show_output(sqrt(op1)); cout << endl;
+            cout<<"The sin of "<<op2 <<" (in Radians) is "; 
+            show_output(sin(op2));
+            cout<< endl;
+        }
+        void square_roots()
+        {
+            cout << "The square root of "<< op1<< " is ";
+            show_output(sqrt(op1)); cout << endl;
 
-        cout << "The square root of "<< op2<< " is ";
-        show_output(sqrt(op2)); cout << endl;
-    }
+            cout << "The square root of "<< op2<< " is ";
+            show_output(sqrt(op2)); cout << endl;
+        }
 };
 
 class Hybrid_Calculator: public SimpleCalculator, public Scietific_Calculator{
     public:
-    Hybrid_Calculator(int a = 0, int b = 0){
-        SimpleCalculator ::op1 = a;
-        SimpleCalculator ::op2 = b;
-        
-        
-
-    }
+        Hybrid_Calculator(int a = 0, int b = 0){
+            SimpleCalculator ::op1 = a;
+            SimpleCalculator ::op2 = b;
+            Scietific_Calculator :: op1 = a;
+            Scietific_Calculator :: op2 = b;
+        }
 
 };
 int main()
 {
-    Hybrid_Calculator cal;
+    Hybrid_Calculator cal(43, 2);
     cout<<"\ncalling sum() :\n";
     cal.sum();
     cout<<"\ncalling subtract() :\n";
