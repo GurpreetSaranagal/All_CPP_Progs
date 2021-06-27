@@ -1,13 +1,20 @@
 /*
 create 2 classes
-1. Simple calulator... takes input of 2 numbers using a utility function and performs +, -, *, / and display the result using another function. 
-2. ScietificCalculator... takes input of 2 numbers using a utility function and performs an four scientific operation of your choice and display the result using another function. 
+1. Simple calulator--> takes input of 2 numbers using a utility function* and performs +, -, *, / and display the result using another function. 
+2. ScietificCalculator--> takes input of 2 numbers using a utility function* and performs an four scientific operation of your choice and display the result using another function. 
 
 Create another class HybridCalculator and inherit it using these 2 classes
     q1. What type of inheritence are you using?
     Q2. Which mode of Inheretenance are you using?
     Q3. Create an object of HybridCalculator and display result of simple and scientific calculator.
     Q4. How is code reusability implemeted?
+*An UTILITY function is a  private function used only within member funtions generally for input and output
+
+Ans 1. I have used mulitilevel inheretence 
+Ans 2. I have used public mode of inheretence
+Ans 3. Alredy done
+Ans 4. I have implemented it by reusing the fuctions defined in both the base classes with the object of derived class i.e. hybrid_calculator. So we are able to perform the fuctions of both the classes like sum and cube. I have just defined the constructor of derived class which provides all the values to data members of base classes.
+
 */
 #include <iostream>
 #include <math.h>
@@ -94,7 +101,7 @@ class Scietific_Calculator
 
 class Hybrid_Calculator: public SimpleCalculator, public Scietific_Calculator{
     public:
-        Hybrid_Calculator(int a = 0, int b = 0){
+        Hybrid_Calculator(double a = 0, double b = 0){
             SimpleCalculator ::op1 = a;
             SimpleCalculator ::op2 = b;
             Scietific_Calculator :: op1 = a;
@@ -104,7 +111,10 @@ class Hybrid_Calculator: public SimpleCalculator, public Scietific_Calculator{
 };
 int main()
 {
-    Hybrid_Calculator cal(43, 2);
+    double a,b;
+    cout <<"input any two numbers(double): \n";
+    cin >> a >> b;
+    Hybrid_Calculator cal(a,b);
     cout<<"\ncalling sum() :\n";
     cal.sum();
     cout<<"\ncalling subtract() :\n";
@@ -122,55 +132,3 @@ int main()
     
     return 0;
 }
-/*
-
-        void simple_sum(double a=0, double b=0){
-            double sum ;
-            if(a && b)// this will be true only if a and b both are non zero
-            // ie if numbers are given their sum will be shown otherwise saved number's
-                sum = a+b;
-            else{
-                sum = op1 + op2;
-                a = op1;
-                b = op2;
-            }
-
-            cout<<"sum of " << a << " and " << b << " : "<<sum;
-        }
-        void simple_subtract(double a, double b){
-            double diff ;
-            if(a && b)// this will be true only if a and b both are non zero
-                diff = a-b;
-            else{
-                diff = op1 - op2;
-                a = op1;
-                b = op2;
-            }
-            
-            cout << "Difference of " << a << " and " << b << " is : "<<diff;
-        }
-        void simple_multiply(double a, double b){
-            double mult ;
-            if(a && b)// this will be true only if a and b both are non zero
-                mult = a*b;
-            else{
-                mult = op1 * op2;
-                a = op1;
-                b = op2;
-            }
-            
-            cout << "Product of " << a << " and " << b << " is : "<<mult;
-        }
-        void simple_divide(double a, double b){
-            double quot ;
-            if(a && b)// this will be true only if a and b both are non zero
-                quot = a/b;
-            else
-            {
-                quot = op1 / op2;
-                a = op1;
-                b = op2;
-            }
-            cout << "Quotient of " << a << " and " << b << " is : "<<quot;
-        }
-*/
