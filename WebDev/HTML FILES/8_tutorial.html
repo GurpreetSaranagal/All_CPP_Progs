@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Most inportant tags in web dev</title>
 </head>
 <body>
     <h2>This is forms tutorial</h2>
-    
+    <form action="backend.php">
+        <!--the data of form will be sent to backend.php file [just for instance] (if present)-->
+        <div>
+            Name: <input type="text" name="MyName" >
+        </div>
+        <br><!--this br here is not recommended because we have to achieve this using css-->
+        <div>
+            Roll: <input type="text" name="MyRoll" >
+        </div>
+        <!--name="MyRoll" means that the data entered through this form will be called by this name in the backend-->
+        <br>
+        <div>
+            Email: <input type="email" name="MyEmail" >
+        </div>
+        <br>
+        <div>
+            <input type="date" name="myData" >
+        </div>
+        <br>
+        <div>
+            Bonus: <input type="number" name="" id="">
+            <!-- FYI: 
+                this attribute allowes us to type only numbers except e for number is power of ten-->
+        </div>
+        <br>
+        <div>
+            Are you Eligible?: <input type="checkbox" name="myEligibility" checked>
+        </div>
+        <br>
+        <div>
+            Gender: Male <input type="radio" name="myGender" id=""> Female <input type="radio" name="myGender" id=""> Other <input type="radio" name="myGender" id="">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+        <br>
+        <div>
+            Write About Yourself: <br> 
+            <textarea name="myText"  cols="30" rows="2"></textarea>
+        </div>
+        <br>
+    </form>
 </body>
 </html>
