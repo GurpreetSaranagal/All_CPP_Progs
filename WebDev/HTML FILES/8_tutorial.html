@@ -11,44 +11,60 @@
     <form action="backend.php">
         <!--the data of form will be sent to backend.php file [just for instance] (if present)-->
         <div>
-            Name: <input type="text" name="MyName" >
+            <label for="name">Name: </label>
+            <input type="text" name="MyName" id="name">
         </div>
         <br><!--this br here is not recommended because we have to achieve this using css-->
         <div>
-            Roll: <input type="text" name="MyRoll" >
+            <label for="role">Role: </label>
+            <input type="text" name="MyRoll" id="role" >
         </div>
         <!--name="MyRoll" means that the data entered through this form will be called by this name in the backend-->
         <br>
         <div>
-            Email: <input type="email" name="MyEmail" >
+            <label for="em">Email: </label>
+            <input type="email" name="MyEmail" id="em" >
         </div>
         <br>
         <div>
-            <input type="date" name="myData" >
+            <label for="da">Select Date: </label>
+            <input type="date" name="myDate" id="da" >
         </div>
         <br>
         <div>
-            Bonus: <input type="number" name="" id="">
+            <label for="bonus">Bonus: </label>
+            <input type="number" name="" id="bonus">
             <!-- FYI: 
                 this attribute allowes us to type only numbers except e for number is power of ten-->
         </div>
         <br>
         <div>
-            Are you Eligible?: <input type="checkbox" name="myEligibility" checked>
+        <label for="ele">Are you elegible: </label>
+            <input type="checkbox" name="myEligibility" id="ele" checked>
         </div>
         <br>
         <div>
             Gender: Male <input type="radio" name="myGender" id=""> Female <input type="radio" name="myGender" id=""> Other <input type="radio" name="myGender" id="">
         </div>
         <br>
+        
         <div>
-            <input type="submit" value="Submit Now">
-            <input type="reset" value="Reset Now">
+            <label for="car">Select your CAR: </label>
+            <select name="myCar" id="car">
+                <option value="ind" selected>Indica </option>
+                <option value="swf">Swift</option>
+            </select>
+        </div>
+        <br>
+        
+        <label for="text">Share your with us experience: </label>
+        <div>
+            <textarea name="myText"  cols="40" rows="2" id="text" > </textarea>
         </div>
         <br>
         <div>
-            Write About Yourself: <br> 
-            <textarea name="myText"  cols="30" rows="2"></textarea>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
         </div>
         <br>
     </form>
