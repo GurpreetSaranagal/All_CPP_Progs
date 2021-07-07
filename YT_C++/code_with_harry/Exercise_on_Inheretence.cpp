@@ -17,7 +17,7 @@ Ans 4. I have implemented it by reusing the fuctions defined in both the base cl
 
 */
 #include <iostream>
-#include <math.h>
+// #include <math.h>
 #include <cmath>
 using namespace std;
 class SimpleCalculator
@@ -27,14 +27,14 @@ class SimpleCalculator
         double op2;
         void utility_output(double ans)
         {
-            cout << "The output of performed calculation is " << ans << endl;
+            cout << ": " << ans << "\n";
         }
         
 
     public:
     void set_numbers()
         {
-            cout << "Input the numbers:" << endl;
+            cout << "Input two numbers:" << "\n";
             cin >> op1 >> op2;
         }
         void sum()
@@ -52,6 +52,12 @@ class SimpleCalculator
         void divide()
         {
             utility_output(op1 / op2);
+        }
+        void PerformOperations(){
+            sum();
+            subtract();
+            multiply();
+            divide();
         }
 };
 class Scietific_Calculator
@@ -97,6 +103,10 @@ class Scietific_Calculator
             cout << "The square root of "<< op2<< " is ";
             show_output(sqrt(op2)); cout << endl;
         }
+        void exponent(){
+            cout<< "The value of exp(" << op1 <<") is : "<< exp(op1) <<"\n";
+            cout<< "The value of exp(" << op2<< ") is : "<< exp(op1) <<"\n";
+        }
 };
 
 class Hybrid_Calculator: public SimpleCalculator, public Scietific_Calculator{
@@ -129,6 +139,9 @@ int main()
     cal.sin_of_number();
     cout<<"\ncalling square_roots() :\n";
     cal.square_roots();
+    cout<<"\nCalling exponent() :\n";
+    cal.exponent();
+    // cal.PerformOperations();
     
     return 0;
 }
