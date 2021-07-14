@@ -1,3 +1,3 @@
-y (){
-    //     cout <<"Hello my beautifl people \n";
-    // }
+
+    // cout<<"Enter your name: ";
+    // cin>>name;

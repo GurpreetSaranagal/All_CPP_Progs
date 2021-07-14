@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-class CWH
-{
+class CWH // this is an abstract base class because it contain one pure virtual function
+{          // this class is essentially designed to be inherited by other classes 
     protected:
         string title;
         float rating;
@@ -10,7 +10,8 @@ class CWH
             title = s;
             rating = r;
         }
-        virtual void display(){}
+        virtual void display() = 0;// do-nothing function --> pure virtual functions
+        // this makes the function mandatory to be defined in the derived class or it generates an error
 };
 class CWHVideo: public CWH
 {
