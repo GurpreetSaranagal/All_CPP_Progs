@@ -20,6 +20,13 @@ public:
     void mout();
     void min();
     matrix operator*( matrix);
+    ~matrix (){
+        for(int i =0 ; i<m; i++)
+        {
+            // cout <<"distructor is called for mat[0][0] "<< mat[0][0]<<" for " << i+1 <<" times\n";
+            delete [] mat[i];
+        }
+    }
 };
 void matrix ::mout()
 {
@@ -33,7 +40,7 @@ void matrix ::mout()
         }
         cout << "\n\n";
     }
-    this -> mat[0][0] = -10;
+    
 }
 void matrix ::min()
 {
@@ -60,9 +67,9 @@ matrix matrix ::operator*( matrix mat2)
     // general formula is res[i][j] =   E[ first[i][k] * second[k][j] ]                  ;E => summision
                                     //k=0
 //                      res [i][j] = A[i][k] * b[k][j]+ A[]
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i < res.m; i++)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < res.n; j++)
         {
             sum = 0;
             for (int k = 0; k < n; k++)
