@@ -1,4 +1,5 @@
 // 7/16/2021 
+// this is copy of the same program OOPs > matrix_... because here concept of operator overloading is applied 
 #include <iostream>
 using namespace std;
 class matrix
@@ -11,9 +12,6 @@ public:
     // constructor to initialize the **mat using new operator
     matrix(int row = 0, int col = 0) : m(row), n(col) //this is initializer list
     {
-        // following is the way to dynaically allocate 2d array in a class 
-        // int mat[...][...] ; is not allowed in c++
-        // It doesnot allow to use data members to allocate memory to arrays in class so we need to dynamically allocate it using following method
         mat = new int *[m]; // allocates array of m numbers[elements] of interger pointers
         for (int i = 0; i < m; i++)
         {
@@ -22,7 +20,7 @@ public:
     }
     void mout();
     void min();
-    matrix operator*( matrix);
+    matrix operator*( matrix); 
     ~matrix (){
         for(int i =0 ; i<m; i++)
         {
