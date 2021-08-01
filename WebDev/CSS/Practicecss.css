@@ -1,0 +1,36 @@
+#heading{
+    margin: 1rem 0px;
+    text-align: center;
+    color: indigo;
+    background-color:khaki;
+}
+p{
+    
+    margin-bottom: 1rem;
+    color: crimson;
+    text-align: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+button{
+    color:orangered;
+    /* text-align: center; */
+    border-color: white;
+    
+    font-size: .9rem;
+    background-color:purple;
+    /* background-color: #fff; */
+}
+button:hover{
+    color:purple;
+    background-color:pink;
+    transition: 0.365s;
+}
+#buttons{
+    display: flex; 
+    align-items: center;
+    
+    /* text-align: center; */
+}
