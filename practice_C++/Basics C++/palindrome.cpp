@@ -1,22 +1,21 @@
 #include <iostream>
 using namespace std;
-int main ()
+int main()
 {
     int num, z, rev = 0, rem;
     cout << "Enter a number :";
     cin >> num;
-    z=num;
+    z = num;
     while (num > 0)
     {
         rem = num % 10;
         num = num / 10;
-        rev =( rev *10 ) + rem;
+        rev = (rev * 10) + rem;
     }
     if (rev == z)
         cout << "Given number is Palindrome";
-    else 
-        cout << "Given number is NOT a Palindrom"; 
-    
+    else
+        cout << "Given number is NOT a Palindrom";
+
     return 0;
-    
 }
