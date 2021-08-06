@@ -18,7 +18,7 @@ public:
     }
     void get_base1int()
     {
-        cout << "variable of base1 is " << base1int<< endl;
+        cout << "variable of base1 is " << base1int << endl;
     }
 };
 class Base2
@@ -33,7 +33,7 @@ public:
     }
     void get_base2int()
     {
-        cout << "variable of base2 is " << base2int<<endl;
+        cout << "variable of base2 is " << base2int << endl;
     }
 };
 class Base3
@@ -48,16 +48,18 @@ public:
     }
     void get_base3int()
     {
-        cout << "variable of base3 is " << base3int<<endl;
+        cout << "variable of base3 is " << base3int << endl;
     }
 };
-class Derived : public Base1, public Base2, public Base3{
-    public:
-    void show(){
+class Derived : public Base1, public Base2, public Base3
+{
+public:
+    void show()
+    {
         get_base1int();
         get_base2int();
         get_base3int();
-        cout << "The sum of these values is "<< base1int + base2int + base3int<<endl;
+        cout << "The sum of these values is " << base1int + base2int + base3int << endl;
     }
 };
 /*
