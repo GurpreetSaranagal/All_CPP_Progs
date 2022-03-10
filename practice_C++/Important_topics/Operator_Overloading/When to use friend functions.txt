@@ -1,8 +1,0 @@
-As you have seen while overloading operators either using a member function or a friend function, the results are same. In such cases, it is always preferred to overload operator function as a member function of the class. Thus it does not provide the significance of using a friend function for overloading operators. so friend functions are used when we have to encounter statement such as                 res = 5.0 +             c1;                                                                                  here member functions fails because at the left side of operator there is primitive data type and not the objects of the class. So there is no way to generate a call to the overloaded member function.
-To overcome this problem, we should overload the + operator using the friend function and not a member fuction. In such case, we need to pass both the arguments explicitly to the overloaded friend operator function. 
-The declaration of the friend functions for above problem would be 
-
-friend complex operator+(double, complex);
-friend complex operator-(complex, double);
-
-Thus to conclude, when the operator function is member of a class then the operand on the left side of the operator expression must always be an object of that class. If the operator function is a friend function then the operand on the lift side can be an object of different type (build in or object of different type). It should be kept in mind that the operator [], (), -> or any of the assignment operator must be overloaded as the member of the class.
