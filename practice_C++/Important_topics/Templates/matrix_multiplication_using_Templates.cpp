@@ -65,7 +65,7 @@ matrix matrix ::operator*( matrix mat2)
     }
     int sum;
     matrix res(m, mat2.n);          //n-1
-    // general formula is res[i][j] =   E[ first[i][k] * second[k][j] ]                  ;E => summision
+    // general formula is res[i][j] =   E[ first[i][k] * second[k][j] ]                  ;E => summation
                                     //k=0
 //                      res [i][j] = A[i][k] * b[k][j] + ...
     for (int i = 0; i < res.m; i++)
