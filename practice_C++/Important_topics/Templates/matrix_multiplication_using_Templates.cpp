@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // 7/16/2021 
 // this is copy of the same program OOPs > matrix_... because here concept of operator overloading is applied 
 #include <iostream>
@@ -65,7 +66,7 @@ matrix matrix ::operator*( matrix mat2)
     }
     int sum;
     matrix res(m, mat2.n);          //n-1
-    // general formula is res[i][j] =   E[ first[i][k] * second[k][j] ]                  ;E => summation
+    // general formula is res[i][j] =   E[ first[i][k] * second[k][j] ]                  ;E => summision
                                     //k=0
 //                      res [i][j] = A[i][k] * b[k][j] + ...
     for (int i = 0; i < res.m; i++)
@@ -102,4 +103,5 @@ int main()
 
 
 
+>>>>>>> Stashed changes
 //  aur yeh hai mentos zindagi
